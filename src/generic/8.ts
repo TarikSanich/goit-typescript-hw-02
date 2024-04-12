@@ -18,7 +18,8 @@ type Form = {
   errors: Errors;
 };
 
-// Реалізуйте Params так, щоб унеможливити поле 'errors' з типу Form
-type Params = Form;
+// Використання Omit для створення типу Params без поля 'errors'
+type Params = Omit<Form, 'errors'>;
+
 
 export {};
